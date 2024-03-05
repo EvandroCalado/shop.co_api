@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    container_name: shop_co
+    hostname: shop_co
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: shop_co
+    ports:
+      - "5432:5432"
